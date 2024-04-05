@@ -2,9 +2,9 @@ import Navbar from "../components/Navbar";
 
 export default async function Home() {
     return (
-        <h1>
+        <div className="w-1 h-1">
             <Navbar />
-        </h1>
+        </div>
     )
         
 }
