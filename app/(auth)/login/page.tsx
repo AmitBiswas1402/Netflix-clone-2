@@ -3,8 +3,17 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import GithubSignInButton from "@/app/components/GithubSigninButton";
 import GoogleSignInButton from "@/app/components/GoogleSigninButton";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/utils/auth";
+import { redirect } from "next/navigation";
 
-export default function Login() {
+export default async function Login() {
+  const session = await getServerSession(authOptions)
+
+  if(session){
+    return redirect('/home')
+  }
+
   return (
     <div className=" mt-40 flex items-center justify-center">
       <div className="rounded bg-black/70 py-10 px-6 md:mt-0 md:max-w-sm md:px-14">
