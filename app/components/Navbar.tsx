@@ -23,7 +23,11 @@ export default function Navbar() {
           <Image src={logo} alt="Logo" priority />
         </Link>
         <ul className="lg:flex gap-x-4 ml-14 hidden">
-            
+          {links.map((link, idx) => (
+            <div key={idx}>
+              
+            </div>
+          ))}
         </ul>
       </div>
     </div>
