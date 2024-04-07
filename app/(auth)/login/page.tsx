@@ -17,7 +17,7 @@ export default async function Login() {
   return (
     <div className=" mt-40 flex items-center justify-center">
       <div className="rounded bg-black/70 py-10 px-6 md:mt-0 md:max-w-sm md:px-14">
-        <form>
+        <form method="post" action="/api/auth/signIn">
           <h1 className="text-3xl font-semibold text-white flex items-center justify-center">
             Login 
           </h1>
